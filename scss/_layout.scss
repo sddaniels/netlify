@@ -1,0 +1,203 @@
+@mixin pageShadow() {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.03);
+}
+
+body {
+  background: $color-med-gray url(../images/bg.svg) no-repeat center -56px;
+  background-size: 4096px 1152px;
+  color: $color-black;
+  margin: 0;
+
+  @media screen and (max-width: $size-1050) {
+    background-position: center -35px;
+    background-size: 2560px 720px;
+  }
+
+  @media screen and (max-width: $size-420) {
+    background-position: center -28px;
+    background-size: 2048px 576px;
+  }
+}
+
+header {
+  position: relative;
+  height: 256px;
+  overflow: auto;
+  text-align: center;
+
+  @media (max-width: $size-1050) {
+    height: 160px;
+  }
+
+  @media (max-width: $size-420) {
+    height: 128px;
+  }
+}
+
+.monogram {
+  position: relative;
+  margin: 0;
+  top: 59px;
+
+  @media (max-width: $size-1050) {
+    top: 35px;
+  }
+
+  @media (max-width: $size-420) {
+    top: 26px;
+  }
+
+  &__image {
+    width: 200px;
+
+    @media (max-width: $size-1050) {
+      width: 130px;
+    }
+
+    @media (max-width: $size-420) {
+      width: 110px;
+    }
+  }
+}
+
+main {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 960px;
+  margin: 0 auto 40px;
+  padding: 80px 140px 80px;
+  background-color: white;
+
+  @include pageShadow();
+
+  @mixin mainMediaQuery($screen-width, $margin-side, $padding) {
+    @media screen and (max-width: $screen-width) {
+      width: calc(100% - ($margin-side * 2));
+      margin: 0 $margin-side 40px;
+      padding: $padding;
+    }
+  }
+
+  @include mainMediaQuery($size-1050, 30px, 60px);
+  @include mainMediaQuery($size-640, 20px, 40px);
+  @include mainMediaQuery($size-420, 10px, 20px);
+
+  &.letter {
+    margin-bottom: 130px;
+
+    @media screen and (max-width: $size-1050) {
+      margin-bottom: 140px;
+    }
+
+    @media screen and (max-width: $size-770) {
+      margin-bottom: 140px;
+    }
+
+    @media screen and (max-width: $size-420) {
+      margin-bottom: 120px;
+    }
+
+    @media screen and (max-width: $size-380) {
+      margin-bottom: 356px;
+    }
+  }
+}
+
+dl {
+  margin-bottom: 46px;
+
+  @media screen and (max-width: $size-640) {
+    margin-bottom: 32px;
+  }
+}
+
+.valediction {
+  display: flex;
+
+  @media screen and (max-width: $size-380) {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+.photo {
+  position: relative;
+  width: 330px;
+
+  @media screen and (max-width: $size-536) {
+    width: 244px;
+  }
+
+  &__border {
+    position: absolute;
+    top: 42px;
+    left: -10px;
+    width: 330px;
+    box-sizing: border-box;
+    padding: 30px;
+    background-color: white;
+    transform: rotate(-5deg);
+
+    @include pageShadow();
+
+    @media screen and (max-width: $size-1050) {
+      left: 46px;
+    }
+
+    @media screen and (max-width: $size-770) {
+      left: 0;
+    }
+
+    @media screen and (max-width: $size-536) {
+      width: 280px;
+      left: -56px;
+    }
+
+    @media screen and (max-width: $size-380) {
+      top: -38px;
+      left: 20px;
+    }
+
+    @media screen and (max-width: $size-360) {
+      left: -28px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
+
+.signature-block {
+  width: calc(100% - 360px);
+  margin: 136px 30px 60px 0;
+  text-align: center;
+
+  @media screen and (max-width: $size-380) {
+    margin: 40px 0 60px 40%;
+  }
+
+  &__signature {
+    display: inline-block;
+    margin-left: 40px;
+    font-family: 'Sacramento', cursive;
+    font-size: 48px;
+    line-height: 77px;
+    transform: rotate(-5deg);
+
+    @media screen and (max-width: $size-580) {
+      margin-left: 14px;
+    }
+
+    @media screen and (max-width: $size-470) {
+      font-size: 38px;
+      line-height: 77px;
+    }
+  }
+}
+
+footer {
+  margin: 0 0 40px;
+  text-align: center;
+  color: darken($color-med-gray, 30%);
+  text-shadow: 0 1px 0 white;
+}

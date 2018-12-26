@@ -1,136 +1,17 @@
-<!doctype html>
-<html class="no-js" lang="">
+---
+layout: default
+---
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Frequently Asked Questions - Shea Daniels</title>
-  <meta name="description" content="Shea's coming out letter to friends and family.">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<main>
+  <h2>
+    {{ site.data.faq.heading }}
+  </h2>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
+  <dl>
+    {% for item in site.data.faq.faqs %}
+      <dt>{{ item.question }}</dt>
+      <dd>{{ item.answer }}</dd>
+    {% endfor %}
 
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Sacramento" rel="stylesheet">
-  <link rel="stylesheet" href="../css/main.min.css">
-</head>
-
-<body>
-  <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-
-  <header>
-    <h1 class="monogram">
-      <img class="monogram__image" src="../images/sdd.svg" alt="SDD" title="Shea D. Daniels" >
-    </h1>
-  </header>
-
-  <main>
-    <h2>
-      Frequently Asked Questions
-    </h2>
-
-    <dl>
-      <dt>
-        Are you going to change your name?
-      </dt>
-      <dd>
-        No, I am fine with Shea. Luckily enough it works for either gender, so I don't need to change my name unlike most trans people.
-      </dd>
-
-      <dt>
-        What pronouns should I use for you?
-      </dt>
-      <dd>
-        I would respectfully ask that you use female pronouns for me, such as "she", "her", and "hers". I understand this is hard for people who have known me a long time, so
-        I won't take any offense as long as you're trying. I may give you a gentle reminder, but there's no need to have it be a thing any bigger than that.
-      </dd>
-
-      <dt>
-        Are you still with Lindsey and/or married?
-      </dt>
-      <dd>
-        Yes, we are still together. I know this is something that she did not sign up for, so it is difficult and she prefers not to discuss it much. I would ask that you respect any wishes of privacy she has.
-      </dd>
-
-      <dt>
-        How long has this been something you've dealt with? How long have you been transitioning?
-      </dt>
-      <dd>
-        I've always known I was different for a long time, since I was very young, but I didn't know what it meant. Everyone's journey is different, and it took me a long time to figure out
-        that my intrusive thoughts and desires actually meant I was transgender. There is also an aspect of "it can't be me" there to deal with. About three years ago I started seeing a therapist
-        to figure out how to deal with this. I've been medically transitioning for a little over two years now, and I came out at work in October 2017.
-      </dd>
-
-      <dt>
-        Will your voice be different than the last time I saw you?
-      </dt>
-      <dd>
-        If you haven't seen me since I transitioned, then yes it will be different. Voice is highly linked to gender, so I make an effort to fit in. Unfortunately, taking estrogen
-        does not affect a person's voice, so it's all based on continuous effort from me. Your understanding is appreciated :)
-      </dd>
-
-      <dt>
-        Are you crazy? This is a mental illness that you should treat instead of changing your body.
-      </dt>
-      <dd>
-        Well, I can't rule out being a bit crazy in some ways, but I'm betting my life on the fact that this isn't a delusion. The scientific and medical community's best understanding of why
-        people are transgender is that there is some sort of biological cause, although they don't know exactly what. Gender incongruence is not considered a mental illness on it's own. Gender dysphoria,
-        the bad feelings associated with that incongruence, <em>is</em> considered a mental illness to the extent that it interferes with one's ability to function in life. But, there is no way to "therapy"
-        your way out of this, or treat it with depression medication, etc. The most viable treatment is to transition the body to match the mind. With that treatment, feelings of dyphoria are
-        reduced. Because of this, I don't have any room to argue with people in my life about whether it's real or not, especially if it's a religion based debate.
-      </dd>
-
-      <dt>
-        Is your family supportive? Work? Friends?
-      </dt>
-      <dd>
-        Yes, yes, and yes. My workplace has been amazing, especially with the Diversity &amp; Inclusion initiaves they are taking on. All of the friends that I have come out to so far have been lovely.
-      </dd>
-
-      <dt>
-        I'm curious about some things, can I ask you or is that too invasive?
-      </dt>
-      <dd>
-        I'm pretty close to an open book about all this, so please ask. I won't be offended as long as it's a question asked in earnest. As a side note, though, please remember that other trans
-        people you meet may have a different tolerance for questions than I do. It's also considered a bit rude and personal to inquire about a person's private parts, as it would be for any
-        person, trans or not.
-      </dd>
-
-      <dt>
-        I feel unsure about this. I'm nervous about the next time I see you. Is that normal?
-      </dt>
-      <dd>
-        Yes, I think that's normal. You're allowed to have your own feelings, and meeting a trans person tends to be a new experience. I will say, in general, that it's been
-        almost a non-event for most people after we get a chance to catch up.
-      </dd>
-    </dl>
-
-    <a href="..">&larr; Back to the note</a>
-
-  </main>
-
-  <footer>
-    <p>
-      Made with &hearts; by Shea Daniels
-    </p>
-  </footer>
-
-  <script src="../js/modernizr-3.6.0.min.js"></script>
-  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <!-- <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script> -->
-</body>
-
-</html>
+  <a href="..">&larr; Back to the note</a>
+</main>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>A note for friends and family - Shea Daniels</title>
+  <meta name="description" content="Shea's coming out letter to friends and family.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Sacramento" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "/css/main.min.css" | prepend: site.baseurl }}">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <header>
+    <h1 class="monogram">
+      <img class="monogram__image" src="images/sdd.svg" alt="SDD" title="Shea D. Daniels" >
+    </h1>
+  </header>
+
+  {{ content }}
+
+  <footer>
+    <p>
+      Made with &hearts; by Shea Daniels
+    </p>
+  </footer>
+
+  <script src="js/modernizr-3.6.0.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <!-- <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script> -->
+
+  <script src="https://identity.netlify.com/v1/netlify-identity.js"></script>
+  <script>
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", function () {
+        netlifyIdentity.init({
+          APIUrl: "https://hardcore-panini-a59101.netlify.com/.netlify/identity"
+        });
+      });
+    } else {
+      netlifyIdentity.init({
+        APIUrl: "https://hardcore-panini-a59101.netlify.com/.netlify/identity"
+      });
+    }
+  </script>
+</body>
+
+</html>

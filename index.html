@@ -109,6 +109,21 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async defer></script> -->
+
+  <script src="https://identity.netlify.com/v1/netlify-identity.js"></script>
+  <script>
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", function () {
+        netlifyIdentity.init({
+          APIUrl: "https://hardcore-panini-a59101.netlify.com/.netlify/identity"
+        });
+      });
+    } else {
+      netlifyIdentity.init({
+        APIUrl: "https://hardcore-panini-a59101.netlify.com/.netlify/identity"
+      });
+    }
+  </script>
 </body>
 
 </html>
